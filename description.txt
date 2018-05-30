@@ -1,0 +1,17 @@
+Twoim zadaniem jest wygenerowanie i wyświetlenie na stronie po jednym boksie dla każdego z obiektów, stosując poniższe zasady:
+
+1. Wartość id ma być atrybutem id boksa.
+2. Wartość title ma być zawartością headera.
+3. Wartość content ma zostać wstawiona po headerze.
+4. Każda z wartości w tablicy categories ma zostać dodana jako klasa boksa.
+5. Cały boks najlepiej wygenerować jako jeden ciąg tekstowy i dopiero wtedy dodać go do body lub innego elementu.
+
+Klasy dodane na boksie:
+
+*highlighted — zmienia kolor tła całego boksa,
+*special-header — zmienia kolor headera,
+*important — jeśli nie ma tej klasy, boks ma mieć opacity: 0.7;, a jeśli ta klasa jest nadana, ma mieć opacity: 1;.
+
+Pamiętaj, aby realizować zadanie krok po kroku. Pierwszym krokiem może być choćby wygenerowanie zwykłego diva z tytułem dla każdego obiektu.
+
+Powodzenia!
