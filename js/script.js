@@ -33,16 +33,23 @@ var data = [
 
 
 function readData(data){
+	let content = "";
 	for(i in data){
-		generateBox(data[i]);
+		content += generateBox(data[i]);
 	}
+	return content;
 }
 
 function generateBox(boxObj) {
-	let elementHTML = "<div id=\"" + boxObj.id + "\"></div>"
-	document.write(elementHTML);
+	let classString = "class=\"box ";
+	if(boxObj.categories) {
+
+		for(let cat in boxObj.categories){
+			classString+=boxObj.categories[cat] + " ";
+		}
+		classString += '\"';
+	}
+	return elementHTML = "<div " + classString + " id=\"" + boxObj.id + "\"><header><title>"+ boxObj.title+"</title></header>"+boxObj.content +"</div>";
 }
 
-readData(data);
-
-
+document.write(readData(data));
