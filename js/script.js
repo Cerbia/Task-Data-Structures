@@ -41,15 +41,15 @@ function readData(data){
 }
 
 function generateBox(boxObj) {
-	let classString = "class=\"box ";
-	if(boxObj.categories) {
+	let classString = "";
+	if(boxObj.categories.length>0) {
 
 		for(let cat in boxObj.categories){
-			classString+=boxObj.categories[cat] + " ";
+			classString+=`${boxObj.categories[cat]} `;
 		}
-		classString += '\"';
+		
 	}
-	return elementHTML = "<div " + classString + " id=\"" + boxObj.id + "\"><header><title>"+ boxObj.title+"</title></header>"+boxObj.content +"</div>";
+	return elementHTML = `<div class="box ${classString}" id=${boxObj.id}><header><title>${boxObj.title}</title></header>${boxObj.content}</div>`;
 }
 
 document.write(readData(data));
